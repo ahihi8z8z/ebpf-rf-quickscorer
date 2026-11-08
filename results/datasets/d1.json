@@ -1,0 +1,98 @@
+{
+ "dataset": "d1",
+ "prefixes": [
+  "out/cic/monday",
+  "out/cic/tuesday",
+  "out/cic/wednesday",
+  "out/cic/thursday",
+  "out/cic/friday"
+ ],
+ "flows": 602322,
+ "block_s": 300,
+ "excluded": {
+  "unlabelled": 139,
+  "ambiguous": 0
+ },
+ "native_counts": {
+  "BENIGN": 506286,
+  "FTP-Patator": 3990,
+  "SSH-Patator": 2973,
+  "DoS GoldenEye": 7452,
+  "DoS Hulk": 14258,
+  "DoS Slowhttptest": 1132,
+  "DoS slowloris": 2208,
+  "Heartbleed": 1,
+  "Infiltration": 7,
+  "Web Attack - Brute Force": 151,
+  "Web Attack - Sql Injection": 12,
+  "Web Attack - XSS": 26,
+  "Bot": 738,
+  "DDoS": 62880,
+  "PortScan": 208
+ },
+ "family_support_train_val_test": {
+  "Benign": [
+   300635,
+   101288,
+   104363
+  ],
+  "Bot": [
+   439,
+   147,
+   152
+  ],
+  "BruteForce": [
+   4394,
+   1190,
+   1379
+  ],
+  "DDoS": [
+   46853,
+   3659,
+   12368
+  ],
+  "DoS": [
+   23892,
+   700,
+   458
+  ],
+  "Heartbleed": [
+   0,
+   0,
+   1
+  ],
+  "Infiltration": [
+   3,
+   1,
+   3
+  ],
+  "PortScan": [
+   87,
+   25,
+   96
+  ],
+  "WebAttack": [
+   89,
+   58,
+   42
+  ]
+ },
+ "multiclass_classes": [
+  "Benign",
+  "Bot",
+  "BruteForce",
+  "DDoS",
+  "DoS"
+ ],
+ "multiclass_excluded_flows": 405,
+ "split_sizes": [
+  376392,
+  107068,
+  118862
+ ],
+ "attack_share": [
+  0.20127154668537056,
+  0.05398438375611761,
+  0.12198179401322543
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "dataset": "d1",
+ "mc_names": [
+  "Benign",
+  "Bot",
+  "BruteForce",
+  "DDoS",
+  "DoS"
+ ],
+ "slices": [
+  {
+   "family": "Benign",
+   "prefix": "out/cic/wednesday",
+   "pcap": "data/cicids2017/wed.pcap",
+   "block": 4997594,
+   "start": 1499278200,
+   "dur": 300,
+   "n_family": 4152,
+   "n_benign": 4152
+  },
+  {
+   "family": "Bot",
+   "prefix": "out/cic/friday",
+   "pcap": "trackr/data/cicids2017/Friday-WorkingHours.pcap",
+   "block": 4998114,
+   "start": 1499434200,
+   "dur": 300,
+   "n_family": 100,
+   "n_benign": 1474
+  },
+  {
+   "family": "BruteForce",
+   "prefix": "out/cic/tuesday",
+   "pcap": "trackr/data/cicids2017/Tuesday-WorkingHours.pcap",
+   "block": 4997239,
+   "start": 1499171700,
+   "dur": 300,
+   "n_family": 330,
+   "n_benign": 1931
+  },
+  {
+   "family": "DDoS",
+   "prefix": "out/cic/friday",
+   "pcap": "trackr/data/cicids2017/Friday-WorkingHours.pcap",
+   "block": 4998179,
+   "start": 1499453700,
+   "dur": 300,
+   "n_family": 12368,
+   "n_benign": 1332
+  },
+  {
+   "family": "DoS",
+   "prefix": "out/cic/wednesday",
+   "pcap": "data/cicids2017/wed.pcap",
+   "block": 4997529,
+   "start": 1499258700,
+   "dur": 300,
+   "n_family": 433,
+   "n_benign": 1218
+  }
+ ]
+}

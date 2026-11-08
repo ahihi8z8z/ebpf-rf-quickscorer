@@ -1,0 +1,36 @@
+2026-11-04 06:40 codegen fix: QS bitvector init loop made opaque (clang turned it into memset for large VM ->
+"A call to built-in function 'memset' is not supported"). Rows with error '1 error generated.' written before
+this fix must be deleted from deployability_raw.csv and re-swept (resumable).
+
+== Why QS loses in eBPF but wins in C at <=64 leaves (2026-11-07, static + work-count analysis)
+Model d1_multiclass_RF_T64L64_s0 (test rows, 3000):
+  walk steps/row 476, QS false-node updates/row 1720 (3.6x); T64D6 3.2x; T64D12 11.9x.
+QS-mask inner loop in BPF (llvm-objdump qs_g1.bpf.o, LBB0_12): 22 insns per false node, including
+  sign extension of the threshold, 0x3f index mask, a stack reload (register pressure), and a
+  load-AND-store of the bitvector in per-CPU map memory (S->v), plus a bounds compare against 0xfc0.
+G-RF compiles each node to a compare-with-immediate + branch (thresholds are immediates), so its
+  path costs a few insns per level -> ~1.2 us for T64 vs QS 6.6 us (E4).
+In C (gcc -O2 -march=native) the same QS loop is a few x86 insns and branch-predictable, while the
+  table walk is mispredict-bound -> QS 1.2-3x faster at T>=128 with L32/L64 (cbench).
+Conclusion: QS's advantage relies on cheap, predictable bit operations that beat mispredicted
+  branches; eBPF's verifier-safe code shape (masked indices, map-memory bitvectors, no SIMD,
+  limited registers) makes each update ~4-5x more expensive, and QS does 3-4x more updates
+  than the walk does steps. Not measured dynamically (no perf on the DUT VM); this is an
+  instruction-count explanation consistent with E4.
+
+== E5 replay fix (2026-11-08)
+v1 fidelity was wrong (feature exact 16.6 %, class agreement 51 %). Causes, both in replay preparation:
+ 1. tcprewrite 4.4.4 rewrote IP total length of padded 60-byte frames (40 -> 46) silently.
+ 2. CIC-IDS2017 / CICIoT2023 captures contain >1514-byte frames (TSO/GRO at capture); they cannot cross
+    the 1500-MTU data link (D1 slices: 4-19 % of packets; D3 < 5 %; D2 0 %).
+ Also: UNSW slices are Linux SLL (DLT 113), not Ethernet.
+Fix: ebpf/e5_pcapfix.py (MAC rewrite / SLL->Ethernet, all other bytes kept, oversize frames dropped and
+ counted); offline reference = flowfeat on exactly the replayed pcap; label fallback by direction-free
+ 5-tuple within 120 s. D3 DT check: feature exact 0.9999, class agreement 0.998.
+v1 rows kept in out/e5/v1_tcprewrite/. Load: top4 = 4 parallel tcpreplay-edit with --pnat into disjoint
+ /8s (~400-470 kpps vs ~200 kpps single sender).
+
+== E4b final (2026-11-08) — see pilot_report.md §5, out/e4b/mechanism.md, regime_summary.csv
+- C wins by IPC (QS 3.0-3.2 vs walk 0.65-1.0); eBPF QS 27-32 instr/update vs C 9.7-11.8 (JIT loop 25 x86 vs gcc 9; only 4 verifier-forced).
+- cold (repeat=1) vs warm (repeat=200): warm favours walk; cold eBPF QS/walk 1.04-1.21 where C QS/walk 0.73-0.92. QS/G-RF 4.5-20x.
+- qss (stack bitvector): processed 1000001 -> E2BIG. jitdump.c reads JIT images (bpftool lacks disassembler).

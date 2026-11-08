@@ -1,0 +1,94 @@
+{
+ "coverage_at_N": {
+  "Analysis": {
+   "flows": 412,
+   "reach_N": 412,
+   "share": 1.0
+  },
+  "Backdoor": {
+   "flows": 347,
+   "reach_N": 313,
+   "share": 0.902
+  },
+  "DoS": {
+   "flows": 3544,
+   "reach_N": 3174,
+   "share": 0.8956
+  },
+  "Exploits": {
+   "flows": 25166,
+   "reach_N": 24643,
+   "share": 0.9792
+  },
+  "Fuzzers": {
+   "flows": 19341,
+   "reach_N": 14019,
+   "share": 0.7248
+  },
+  "Generic": {
+   "flows": 3711,
+   "reach_N": 3010,
+   "share": 0.8111
+  },
+  "Normal": {
+   "flows": 1907754,
+   "reach_N": 1536923,
+   "share": 0.8056
+  },
+  "Reconnaissance": {
+   "flows": 11628,
+   "reach_N": 6813,
+   "share": 0.5859
+  },
+  "Shellcode": {
+   "flows": 1511,
+   "reach_N": 750,
+   "share": 0.4964
+  },
+  "Worms": {
+   "flows": 158,
+   "reach_N": 137,
+   "share": 0.8671
+  },
+  "ambiguous": {
+   "flows": 750,
+   "reach_N": 395,
+   "share": 0.5267
+  },
+  "unlabelled": {
+   "flows": 83357,
+   "reach_N": 65414,
+   "share": 0.7847
+  }
+ },
+ "coverage_at_N_all": 0.8048,
+ "test_rows": 315234,
+ "test_dup_in_train_share": 0.1013,
+ "test_dup_in_train_share_attack": 0.0,
+ "ablation_rf_T64D8_s0": {
+  "binary/all17": {
+   "test_macro_f1": 0.9096,
+   "test_nodup_macro_f1": 0.9092,
+   "n_test": 315234,
+   "n_test_nodup": 283306
+  },
+  "binary/no_resp_port": {
+   "test_macro_f1": 0.9096,
+   "test_nodup_macro_f1": 0.9091,
+   "n_test": 315234,
+   "n_test_nodup": 283306
+  },
+  "multiclass/all17": {
+   "test_macro_f1": 0.4792,
+   "test_nodup_macro_f1": 0.4791,
+   "n_test": 315197,
+   "n_test_nodup": 283269
+  },
+  "multiclass/no_resp_port": {
+   "test_macro_f1": 0.3989,
+   "test_nodup_macro_f1": 0.3988,
+   "n_test": 315197,
+   "n_test_nodup": 283269
+  }
+ }
+}

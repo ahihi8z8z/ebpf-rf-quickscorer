@@ -1,0 +1,99 @@
+{
+ "dataset": "d2",
+ "prefixes": [
+  "out/unsw/0122",
+  "out/unsw/0217"
+ ],
+ "flows": 1590194,
+ "block_s": 300,
+ "excluded": {
+  "unlabelled": 65414,
+  "ambiguous": 395
+ },
+ "native_counts": {
+  "Normal": 1536923,
+  "Analysis": 412,
+  "Backdoor": 313,
+  "DoS": 3174,
+  "Exploits": 24643,
+  "Fuzzers": 14019,
+  "Generic": 3010,
+  "Reconnaissance": 6813,
+  "Shellcode": 750,
+  "Worms": 137
+ },
+ "family_support_train_val_test": {
+  "Normal": [
+   925740,
+   307059,
+   304124
+  ],
+  "Analysis": [
+   274,
+   84,
+   54
+  ],
+  "Backdoor": [
+   191,
+   65,
+   57
+  ],
+  "DoS": [
+   1886,
+   629,
+   659
+  ],
+  "Exploits": [
+   14740,
+   4850,
+   5053
+  ],
+  "Fuzzers": [
+   8756,
+   2139,
+   3124
+  ],
+  "Generic": [
+   1773,
+   619,
+   618
+  ],
+  "Reconnaissance": [
+   4150,
+   1319,
+   1344
+  ],
+  "Shellcode": [
+   435,
+   151,
+   164
+  ],
+  "Worms": [
+   73,
+   27,
+   37
+  ]
+ },
+ "multiclass_classes": [
+  "Normal",
+  "Analysis",
+  "Backdoor",
+  "DoS",
+  "Exploits",
+  "Fuzzers",
+  "Generic",
+  "Reconnaissance",
+  "Shellcode"
+ ],
+ "multiclass_excluded_flows": 137,
+ "split_sizes": [
+  958018,
+  316942,
+  315234
+ ],
+ "attack_share": [
+  0.0336924775943667,
+  0.03118236144152558,
+  0.03524366026507293
+ ]
+}

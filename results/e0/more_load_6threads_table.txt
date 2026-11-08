@@ -1,0 +1,4 @@
+| model | variant | n | attach | inf_per_s | ns_per_pkt | sink_pps | dut_rx_pps | offered_pps | xlated | jited | trace |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| filter | clean_drop | 1 | xdp | 460920 | 317.9 | 0 | 426966 | 427445 | 1912 | 1042 | 0 |
+| dt | clean_drop | 1 | xdp | 446063 | 599.5 | 0 | 409447 | 411334 | 3928 | 2282 | 0 |

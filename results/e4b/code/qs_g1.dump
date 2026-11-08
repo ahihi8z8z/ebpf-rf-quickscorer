@@ -1,0 +1,377 @@
+=== qs_stage0 xlated
+int qs_stage0(struct xdp_md * ctx):
+; int qs_stage0(struct xdp_md *ctx) {
+   0: (bf) r8 = r1
+   1: (b7) r7 = 0
+; void *data = (void *)(long)ctx->data, *end = (void *)(long)ctx->data_end;
+   2: (79) r1 = *(u64 *)(r8 +8)
+; void *data = (void *)(long)ctx->data, *end = (void *)(long)ctx->data_end;
+   3: (79) r6 = *(u64 *)(r8 +0)
+; if ((void *)(f + NF) + 1 > end) return 0;
+   4: (bf) r2 = r6
+   5: (07) r2 += 111
+; if ((void *)(f + NF) + 1 > end) return 0;
+   6: (2d) if r2 > r1 goto pc+169
+; static __always_inline struct scratch *get_scr(void) { __u32 z = 0; return bpf_map_lookup_elem(&scr, &z); }
+   7: (63) *(u32 *)(r10 -4) = r7
+   8: (bf) r2 = r10
+; 
+   9: (07) r2 += -4
+; static __always_inline struct scratch *get_scr(void) { __u32 z = 0; return bpf_map_lookup_elem(&scr, &z); }
+  10: (18) r1 = map[id:14863]
+  12: (85) call percpu_array_map_lookup_elem#320816
+; if (!S) return 0;
+  13: (15) if r0 == 0x0 goto pc+162
+  14: (7b) *(u64 *)(r10 -48) = r8
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  15: (61) r1 = *(u32 *)(r6 +42)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  16: (63) *(u32 *)(r0 +0) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  17: (61) r1 = *(u32 *)(r6 +46)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  18: (63) *(u32 *)(r0 +4) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  19: (61) r1 = *(u32 *)(r6 +50)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  20: (63) *(u32 *)(r0 +8) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  21: (61) r1 = *(u32 *)(r6 +54)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  22: (63) *(u32 *)(r0 +12) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  23: (61) r1 = *(u32 *)(r6 +58)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  24: (63) *(u32 *)(r0 +16) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  25: (61) r1 = *(u32 *)(r6 +62)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  26: (63) *(u32 *)(r0 +20) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  27: (61) r1 = *(u32 *)(r6 +66)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  28: (63) *(u32 *)(r0 +24) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  29: (61) r1 = *(u32 *)(r6 +70)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  30: (63) *(u32 *)(r0 +28) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  31: (61) r1 = *(u32 *)(r6 +74)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  32: (63) *(u32 *)(r0 +32) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  33: (61) r1 = *(u32 *)(r6 +78)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  34: (63) *(u32 *)(r0 +36) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  35: (61) r1 = *(u32 *)(r6 +82)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  36: (63) *(u32 *)(r0 +40) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  37: (61) r1 = *(u32 *)(r6 +86)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  38: (63) *(u32 *)(r0 +44) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  39: (61) r1 = *(u32 *)(r6 +90)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  40: (63) *(u32 *)(r0 +48) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  41: (61) r1 = *(u32 *)(r6 +94)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  42: (63) *(u32 *)(r0 +52) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  43: (61) r1 = *(u32 *)(r6 +98)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  44: (63) *(u32 *)(r0 +56) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  45: (61) r1 = *(u32 *)(r6 +102)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  46: (63) *(u32 *)(r0 +60) = r1
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  47: (61) r1 = *(u32 *)(r6 +106)
+; for (int i = 0; i < NF; i++) S->x[i] = f[i];
+  48: (63) *(u32 *)(r0 +64) = r1
+  49: (b7) r1 = 0
+; for (int c = 0; c < NC; c++) S->s[c] = 0;
+  50: (63) *(u32 *)(r0 +132) = r1
+  51: (63) *(u32 *)(r0 +128) = r1
+  52: (63) *(u32 *)(r0 +140) = r1
+  53: (63) *(u32 *)(r0 +136) = r1
+  54: (63) *(u32 *)(r0 +144) = r1
+  55: (7b) *(u64 *)(r10 -16) = r0
+; for (__u32 i = 0; i <= VM; i++) { __u64 one = ~0ULL; asm volatile("" : "+r"(one)); S->v[i] = one; }  /* opaque: no memset */
+  56: (bf) r2 = r0
+  57: (07) r2 += 152
+; __u32 t0 = stage_t0[STAGE], nt = stage_t0[STAGE + 1] - t0;
+  58: (18) r3 = map[id:14866][0]+0
+  60: (61) r4 = *(u32 *)(r3 +0)
+; __u32 t0 = stage_t0[STAGE], nt = stage_t0[STAGE + 1] - t0;
+  61: (7b) *(u64 *)(r10 -40) = r4
+  62: (61) r3 = *(u32 *)(r3 +4)
+  63: (7b) *(u64 *)(r10 -32) = r3
+; for (__u32 i = 0; i <= VM; i++) { __u64 one = ~0ULL; asm volatile("" : "+r"(one)); S->v[i] = one; }  /* opaque: no memset */
+  64: (b7) r3 = -1
+; for (__u32 i = 0; i <= VM; i++) { __u64 one = ~0ULL; asm volatile("" : "+r"(one)); S->v[i] = one; }  /* opaque: no memset */
+  65: (bf) r4 = r2
+  66: (0f) r4 += r1
+  67: (7b) *(u64 *)(r4 +0) = r3
+; for (__u32 i = 0; i <= VM; i++) { __u64 one = ~0ULL; asm volatile("" : "+r"(one)); S->v[i] = one; }  /* opaque: no memset */
+  68: (07) r1 += 8
+; for (__u32 i = 0; i <= VM; i++) { __u64 one = ~0ULL; asm volatile("" : "+r"(one)); S->v[i] = one; }  /* opaque: no memset */
+  69: (55) if r1 != 0x200 goto pc-6
+  70: (b7) r3 = 0
+  71: (79) r0 = *(u64 *)(r10 -16)
+  72: (05) goto pc+23
+  73: (bf) r2 = r8
+; if (qs_thr[i & QSM] >= xv) break;
+  74: (61) r8 = *(u32 *)(r1 +0)
+  75: (67) r8 <<= 32
+  76: (c7) r8 s>>= 32
+; if (qs_thr[i & QSM] >= xv) break;
+  77: (7d) if r8 s>= r6 goto pc+17
+; __u32 base = qs_tree[i & QSM] * W;
+  78: (69) r8 = *(u16 *)(r9 +0)
+; for (__u32 w = 0; w < W; w++) S->v[(base + w) & VM] &= qs_mask[(i * W + w) & QMM];
+  79: (57) r8 &= 63
+  80: (67) r8 <<= 3
+  81: (0f) r0 += r8
+; for (__u32 w = 0; w < W; w++) S->v[(base + w) & VM] &= qs_mask[(i * W + w) & QMM];
+  82: (79) r8 = *(u64 *)(r7 +0)
+; for (__u32 w = 0; w < W; w++) S->v[(base + w) & VM] &= qs_mask[(i * W + w) & QMM];
+  83: (79) r4 = *(u64 *)(r0 +152)
+  84: (5f) r4 &= r8
+  85: (7b) *(u64 *)(r0 +152) = r4
+  86: (79) r0 = *(u64 *)(r10 -16)
+; for (__u32 i = a; i < b && i < QS_N; i++) {
+  87: (3d) if r2 >= r5 goto pc+7
+  88: (bf) r8 = r2
+  89: (07) r8 += 1
+  90: (07) r7 += 8
+  91: (07) r9 += 2
+  92: (07) r1 += 4
+  93: (b7) r4 = 4032
+  94: (2d) if r4 > r2 goto pc-22
+; for (__u32 f = 0; f < NF; f++) {
+  95: (15) if r3 == 0x11 goto pc+40
+  96: (bf) r1 = r3
+; __u32 a = qs_feat_off[STAGE * (NF + 1) + f], b = qs_feat_off[STAGE * (NF + 1) + f + 1];
+  97: (07) r3 += 1
+; __u32 a = qs_feat_off[STAGE * (NF + 1) + f], b = qs_feat_off[STAGE * (NF + 1) + f + 1];
+  98: (67) r1 <<= 2
+; __u32 a = qs_feat_off[STAGE * (NF + 1) + f], b = qs_feat_off[STAGE * (NF + 1) + f + 1];
+  99: (bf) r2 = r3
+ 100: (67) r2 <<= 2
+ 101: (18) r5 = map[id:14866][0]+8
+ 103: (0f) r5 += r2
+; __u32 a = qs_feat_off[STAGE * (NF + 1) + f], b = qs_feat_off[STAGE * (NF + 1) + f + 1];
+ 104: (18) r2 = map[id:14866][0]+8
+ 106: (0f) r2 += r1
+ 107: (61) r8 = *(u32 *)(r2 +0)
+; __u32 a = qs_feat_off[STAGE * (NF + 1) + f], b = qs_feat_off[STAGE * (NF + 1) + f + 1];
+ 108: (61) r5 = *(u32 *)(r5 +0)
+ 109: (bf) r2 = r5
+; for (__u32 i = a; i < b && i < QS_N; i++) {
+ 110: (b7) r4 = 4032
+ 111: (2d) if r4 > r5 goto pc+1
+ 112: (b7) r2 = 4032
+; for (__u32 i = a; i < b && i < QS_N; i++) {
+ 113: (3d) if r8 >= r2 goto pc-19
+; 
+ 114: (bf) r2 = r0
+ 115: (0f) r2 += r1
+ 116: (61) r6 = *(u32 *)(r2 +0)
+ 117: (67) r6 <<= 32
+ 118: (c7) r6 s>>= 32
+; for (__u32 i = a; i < b && i < QS_N; i++) {
+ 119: (bf) r1 = r8
+ 120: (67) r1 <<= 3
+ 121: (18) r7 = map[id:14866][0]+24656
+ 123: (0f) r7 += r1
+ 124: (bf) r1 = r8
+ 125: (67) r1 <<= 1
+ 126: (18) r9 = map[id:14866][0]+16464
+ 128: (0f) r9 += r1
+ 129: (bf) r2 = r8
+ 130: (67) r2 <<= 2
+ 131: (18) r1 = map[id:14866][0]+80
+ 133: (0f) r1 += r2
+ 134: (07) r8 += 1
+ 135: (05) goto pc-63
+ 136: (79) r1 = *(u64 *)(r10 -40)
+ 137: (79) r2 = *(u64 *)(r10 -32)
+; for (__u32 t = 0; t < nt && t < STAGE_TREES_MAX; t++) {
+ 138: (05) goto pc+39
+; __u32 best = 0, bs = S->s[0];
+ 139: (b7) r7 = 0
+ 140: (79) r1 = *(u64 *)(r10 -48)
+; void *data = (void *)(long)ctx->data, *end = (void *)(long)ctx->data_end;
+ 141: (79) r2 = *(u64 *)(r1 +8)
+; void *data = (void *)(long)ctx->data, *end = (void *)(long)ctx->data_end;
+ 142: (79) r1 = *(u64 *)(r1 +0)
+; if ((void *)(out + 1) > end) return XDP_ABORTED;
+ 143: (bf) r3 = r1
+ 144: (07) r3 += 111
+; if ((void *)(out + 1) > end) return XDP_ABORTED;
+ 145: (2d) if r3 > r2 goto pc+30
+; for (int c = 1; c < NC; c++) if (S->s[c] > bs) { bs = S->s[c]; best = c; }
+ 146: (67) r8 <<= 32
+ 147: (77) r8 >>= 32
+ 148: (67) r6 <<= 32
+ 149: (77) r6 >>= 32
+ 150: (b7) r7 = 1
+ 151: (b7) r2 = 1
+; for (int c = 1; c < NC; c++) if (S->s[c] > bs) { bs = S->s[c]; best = c; }
+ 152: (2d) if r6 > r8 goto pc+1
+ 153: (b7) r2 = 0
+; for (int c = 1; c < NC; c++) if (S->s[c] > bs) { bs = S->s[c]; best = c; }
+ 154: (2d) if r6 > r8 goto pc+1
+ 155: (bf) r6 = r8
+ 156: (67) r5 <<= 32
+ 157: (77) r5 >>= 32
+ 158: (b7) r3 = 2
+; *out = best;
+ 159: (2d) if r5 > r6 goto pc+1
+ 160: (bf) r3 = r2
+; for (int c = 1; c < NC; c++) if (S->s[c] > bs) { bs = S->s[c]; best = c; }
+ 161: (2d) if r5 > r6 goto pc+1
+ 162: (bf) r5 = r6
+ 163: (67) r4 <<= 32
+ 164: (77) r4 >>= 32
+ 165: (b7) r2 = 3
+; *out = best;
+ 166: (2d) if r4 > r5 goto pc+1
+ 167: (bf) r2 = r3
+; for (int c = 1; c < NC; c++) if (S->s[c] > bs) { bs = S->s[c]; best = c; }
+ 168: (2d) if r4 > r5 goto pc+1
+ 169: (bf) r4 = r5
+; for (int c = 1; c < NC; c++) if (S->s[c] > bs) { bs = S->s[c]; best = c; }
+ 170: (67) r9 <<= 32
+ 171: (77) r9 >>= 32
+ 172: (b7) r3 = 4
+; *out = best;
+ 173: (2d) if r9 > r4 goto pc+1
+ 174: (bf) r3 = r2
+; *out = best;
+ 175: (73) *(u8 *)(r1 +110) = r3
+; }
+ 176: (bf) r0 = r7
+ 177: (95) exit
+; __u32 t0 = stage_t0[STAGE], nt = stage_t0[STAGE + 1] - t0;
+ 178: (1f) r2 -= r1
+ 179: (b7) r1 = 1
+; for (__u32 t = 0; t < nt && t < STAGE_TREES_MAX; t++) {
+ 180: (bf) r3 = r0
+ 181: (07) r3 += 152
+ 182: (67) r2 <<= 32
+ 183: (77) r2 >>= 32
+ 184: (7b) *(u64 *)(r10 -32) = r2
+ 185: (05) goto pc+68
+; __u32 li = (leaf_off[(t0 + t) & LOM] + leaf) * NC;
+ 186: (79) r1 = *(u64 *)(r10 -40)
+ 187: (0f) r1 += r7
+ 188: (07) r1 += -1
+; __u32 li = (leaf_off[(t0 + t) & LOM] + leaf) * NC;
+ 189: (57) r1 &= 127
+ 190: (67) r1 <<= 2
+ 191: (18) r4 = map[id:14866][0]+57488
+ 193: (0f) r4 += r1
+ 194: (61) r1 = *(u32 *)(r4 +0)
+; __u32 li = (leaf_off[(t0 + t) & LOM] + leaf) * NC;
+ 195: (0f) r1 += r2
+; __u32 li = (leaf_off[(t0 + t) & LOM] + leaf) * NC;
+ 196: (27) r1 *= 5
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 197: (bf) r5 = r1
+ 198: (07) r5 += 1
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 199: (57) r5 &= 32767
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 200: (bf) r0 = r1
+ 201: (07) r0 += 2
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 202: (57) r0 &= 32767
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 203: (bf) r6 = r1
+ 204: (07) r6 += 3
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 205: (57) r6 &= 32767
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 206: (bf) r4 = r1
+ 207: (07) r4 += 4
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 208: (57) r4 &= 32767
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 209: (18) r2 = map[id:14866][0]+58000
+ 211: (0f) r2 += r4
+ 212: (18) r4 = map[id:14866][0]+58000
+ 214: (0f) r4 += r6
+ 215: (18) r9 = map[id:14866][0]+58000
+ 217: (0f) r9 += r0
+ 218: (18) r0 = map[id:14866][0]+58000
+ 220: (0f) r0 += r5
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 221: (57) r1 &= 32767
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 222: (18) r5 = map[id:14866][0]+58000
+ 224: (0f) r5 += r1
+ 225: (71) r1 = *(u8 *)(r5 +0)
+ 226: (7b) *(u64 *)(r10 -24) = r7
+ 227: (79) r7 = *(u64 *)(r10 -16)
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 228: (61) r8 = *(u32 *)(r7 +128)
+ 229: (0f) r8 += r1
+ 230: (63) *(u32 *)(r7 +128) = r8
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 231: (71) r1 = *(u8 *)(r0 +0)
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 232: (61) r6 = *(u32 *)(r7 +132)
+ 233: (0f) r6 += r1
+ 234: (63) *(u32 *)(r7 +132) = r6
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 235: (71) r1 = *(u8 *)(r9 +0)
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 236: (61) r5 = *(u32 *)(r7 +136)
+ 237: (0f) r5 += r1
+ 238: (63) *(u32 *)(r7 +136) = r5
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 239: (71) r1 = *(u8 *)(r4 +0)
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 240: (61) r4 = *(u32 *)(r7 +140)
+ 241: (0f) r4 += r1
+ 242: (63) *(u32 *)(r7 +140) = r4
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 243: (71) r1 = *(u8 *)(r2 +0)
+; for (__u32 c = 0; c < NC; c++) S->s[c] += leaf_score[(li + c) & LSM];
+ 244: (61) r9 = *(u32 *)(r7 +144)
+ 245: (0f) r9 += r1
+ 246: (63) *(u32 *)(r7 +144) = r9
+ 247: (79) r7 = *(u64 *)(r10 -24)
+ 248: (79) r2 = *(u64 *)(r10 -32)
+; for (__u32 t = 0; t < nt && t < STAGE_TREES_MAX; t++) {
+ 249: (3d) if r7 >= r2 goto pc-111
+ 250: (bf) r1 = r7
+ 251: (07) r1 += 1
+ 252: (07) r3 += 8
+ 253: (b7) r0 = 64
+ 254: (bf) r7 = r1
+ 255: (b7) r2 = 0
+; __u64 v = S->v[(t * W + w) & VM];
+ 256: (79) r1 = *(u64 *)(r3 +0)
+; if (v) { leaf = w * 64 + ctz64(v); break; }
+ 257: (15) if r1 == 0x0 goto pc-72
+; __u64 m = (v & -v) * 0x03f79d71b4cb0a89ULL;
+ 258: (bf) r2 = r1
+ 259: (87) r2 = -r2
+; __u64 m = (v & -v) * 0x03f79d71b4cb0a89ULL;
+ 260: (5f) r1 &= r2
+; __u64 m = (v & -v) * 0x03f79d71b4cb0a89ULL;
+ 261: (18) r2 = 0x3f79d71b4cb0a89
+ 263: (2f) r1 *= r2
+; return debruijn64[m >> 58];
+ 264: (77) r1 >>= 58
+; return debruijn64[m >> 58];
+ 265: (18) r2 = map[id:14866][0]+57424
+ 267: (0f) r2 += r1
+ 268: (71) r2 = *(u8 *)(r2 +0)
+ 269: (05) goto pc-84
+=== qs_stage0 jited

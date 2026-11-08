@@ -1,0 +1,9 @@
+work/
+out/
+data/
+__pycache__/
+*.pyc
+*.o
+*.npz
+!sample/*.npz
+code/trackh/flowfeat

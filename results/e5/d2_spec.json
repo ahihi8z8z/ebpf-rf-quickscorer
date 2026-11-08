@@ -1,0 +1,121 @@
+{
+ "dataset": "d2",
+ "mc_names": [
+  "Normal",
+  "Analysis",
+  "Backdoor",
+  "DoS",
+  "Exploits",
+  "Fuzzers",
+  "Generic",
+  "Reconnaissance",
+  "Shellcode"
+ ],
+ "slices": [
+  {
+   "family": "Normal",
+   "prefix": "out/unsw/0217",
+   "pcap": [
+    "data/unsw/pcap/0217/26.pcap",
+    "data/unsw/pcap/0217/27.pcap"
+   ],
+   "block": 4747539,
+   "start": 1424261700,
+   "dur": 120,
+   "n_family": 7334,
+   "n_benign": 7334
+  },
+  {
+   "family": "Backdoor",
+   "prefix": "out/unsw/0217",
+   "pcap": [
+    "data/unsw/pcap/0217/14.pcap",
+    "data/unsw/pcap/0217/15.pcap"
+   ],
+   "block": 4747474,
+   "start": 1424242200,
+   "dur": 120,
+   "n_family": 5,
+   "n_benign": 5410
+  },
+  {
+   "family": "DoS",
+   "prefix": "out/unsw/0122",
+   "pcap": [
+    "data/unsw/pcap/0122/8.pcap",
+    "data/unsw/pcap/0122/9.pcap"
+   ],
+   "block": 4739779,
+   "start": 1421933700,
+   "dur": 120,
+   "n_family": 32,
+   "n_benign": 5095
+  },
+  {
+   "family": "Exploits",
+   "prefix": "out/unsw/0217",
+   "pcap": [
+    "data/unsw/pcap/0217/11.pcap",
+    "data/unsw/pcap/0217/12.pcap"
+   ],
+   "block": 4747459,
+   "start": 1424237700,
+   "dur": 120,
+   "n_family": 197,
+   "n_benign": 5125
+  },
+  {
+   "family": "Fuzzers",
+   "prefix": "out/unsw/0122",
+   "pcap": [
+    "data/unsw/pcap/0122/1.pcap",
+    "data/unsw/pcap/0122/2.pcap"
+   ],
+   "block": 4739759,
+   "start": 1421927700,
+   "dur": 120,
+   "n_family": 379,
+   "n_benign": 5453
+  },
+  {
+   "family": "Generic",
+   "prefix": "out/unsw/0217",
+   "pcap": [
+    "data/unsw/pcap/0217/3.pcap",
+    "data/unsw/pcap/0217/4.pcap"
+   ],
+   "block": 4747414,
+   "start": 1424224200,
+   "dur": 120,
+   "n_family": 52,
+   "n_benign": 5734
+  },
+  {
+   "family": "Reconnaissance",
+   "prefix": "out/unsw/0217",
+   "pcap": [
+    "data/unsw/pcap/0217/22.pcap",
+    "data/unsw/pcap/0217/23.pcap"
+   ],
+   "block": 4747514,
+   "start": 1424254200,
+   "dur": 120,
+   "n_family": 57,
+   "n_benign": 5502
+  },
+  {
+   "family": "Shellcode",
+   "prefix": "out/unsw/0217",
+   "pcap": [
+    "data/unsw/pcap/0217/24.pcap",
+    "data/unsw/pcap/0217/25.pcap"
+   ],
+   "block": 4747529,
+   "start": 1424258700,
+   "dur": 120,
+   "n_family": 10,
+   "n_benign": 5662
+  }
+ ],
+ "note": "D2 slices: first 120 s of the selected test block"
+}

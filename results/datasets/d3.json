@@ -1,0 +1,149 @@
+{
+ "dataset": "d3",
+ "prefixes": [
+  "out/ciciot/Backdoor_Malware__Backdoor_Malware",
+  "out/ciciot/Benign_Final__BenignTraffic1",
+  "out/ciciot/Benign_Final__BenignTraffic2",
+  "out/ciciot/Benign_Final__BenignTraffic3",
+  "out/ciciot/Benign_Final__BenignTraffic",
+  "out/ciciot/BrowserHijacking__BrowserHijacking",
+  "out/ciciot/CommandInjection__CommandInjection",
+  "out/ciciot/DDoS-ACK_Fragmentation__DDoS-ACK_Fragmentation",
+  "out/ciciot/DDoS-HTTP_Flood__DDoS-HTTP_Flood-",
+  "out/ciciot/DDoS-ICMP_Flood__DDoS-ICMP_Flood",
+  "out/ciciot/DDoS-ICMP_Fragmentation__DDoS-ICMP_Fragmentation",
+  "out/ciciot/DDoS-PSHACK_Flood__DDoS-PSHACK_Flood",
+  "out/ciciot/DDoS-RSTFINFlood__DDoS-RSTFINFlood",
+  "out/ciciot/DDoS-SlowLoris__DDoS-SlowLoris",
+  "out/ciciot/DDoS-SYN_Flood__DDoS-SYN_Flood",
+  "out/ciciot/DDoS-SynonymousIP_Flood__DDoS-SynonymousIP_Flood",
+  "out/ciciot/DDoS-TCP_Flood__DDoS-TCP_Flood",
+  "out/ciciot/DDoS-UDP_Flood__DDoS-UDP_Flood",
+  "out/ciciot/DDoS-UDP_Fragmentation__DDoS-UDP_Fragmentation",
+  "out/ciciot/DictionaryBruteForce__DictionaryBruteForce",
+  "out/ciciot/DNS_Spoofing__DNS_Spoofing",
+  "out/ciciot/DoS-HTTP_Flood__DoS-HTTP_Flood1",
+  "out/ciciot/DoS-HTTP_Flood__DoS-HTTP_Flood",
+  "out/ciciot/DoS-SYN_Flood__DoS-SYN_Flood",
+  "out/ciciot/DoS-TCP_Flood__DoS-TCP_Flood",
+  "out/ciciot/DoS-UDP_Flood__DoS-UDP_Flood",
+  "out/ciciot/Mirai-greeth_flood__Mirai-greeth_flood",
+  "out/ciciot/Mirai-greip_flood__Mirai-greip_flood",
+  "out/ciciot/Mirai-udpplain__Mirai-udpplain",
+  "out/ciciot/MITM-ArpSpoofing__MITM-ArpSpoofing1",
+  "out/ciciot/MITM-ArpSpoofing__MITM-ArpSpoofing",
+  "out/ciciot/Recon-HostDiscovery__Recon-HostDiscovery",
+  "out/ciciot/Recon-OSScan__Recon-OSScan",
+  "out/ciciot/Recon-PingSweep__Recon-PingSweep",
+  "out/ciciot/Recon-PortScan__Recon-PortScan",
+  "out/ciciot/SqlInjection__SqlInjection",
+  "out/ciciot/Uploading_Attack__Uploading_Attack",
+  "out/ciciot/VulnerabilityScan__VulnerabilityScan",
+  "out/ciciot/XSS__XSS"
+ ],
+ "flows": 5867667,
+ "block_s": 60,
+ "excluded": {
+  "unlabelled": 0,
+  "ambiguous": 0
+ },
+ "native_counts": {
+  "Backdoor_Malware": 685,
+  "Benign": 77671,
+  "BrowserHijacking": 802,
+  "CommandInjection": 992,
+  "DDoS-ACK_Fragmentation": 4413,
+  "DDoS-HTTP_Flood": 125437,
+  "DDoS-ICMP_Flood": 1992,
+  "DDoS-ICMP_Fragmentation": 3323,
+  "DDoS-PSHACK_Flood": 919897,
+  "DDoS-RSTFINFlood": 992511,
+  "DDoS-SlowLoris": 94443,
+  "DDoS-SYN_Flood": 1238219,
+  "DDoS-SynonymousIP_Flood": 198143,
+  "DDoS-TCP_Flood": 1272486,
+  "DDoS-UDP_Flood": 31960,
+  "DDoS-UDP_Fragmentation": 3875,
+  "DictionaryBruteForce": 2154,
+  "DNS_Spoofing": 19283,
+  "DoS-HTTP_Flood": 174631,
+  "DoS-SYN_Flood": 201671,
+  "DoS-TCP_Flood": 133236,
+  "DoS-UDP_Flood": 201721,
+  "Mirai-greeth_flood": 1248,
+  "Mirai-greip_flood": 2921,
+  "Mirai-udpplain": 2077,
+  "MITM-ArpSpoofing": 17218,
+  "Recon-HostDiscovery": 5984,
+  "Recon-OSScan": 20731,
+  "Recon-PingSweep": 642,
+  "Recon-PortScan": 18666,
+  "SqlInjection": 2144,
+  "Uploading_Attack": 338,
+  "VulnerabilityScan": 95235,
+  "XSS": 918
+ },
+ "family_support_train_val_test": {
+  "Benign": [
+   47799,
+   15048,
+   14824
+  ],
+  "BruteForce": [
+   756,
+   1073,
+   325
+  ],
+  "DDoS": [
+   3685437,
+   630315,
+   570947
+  ],
+  "DoS": [
+   423795,
+   39219,
+   248245
+  ],
+  "Mirai": [
+   3951,
+   974,
+   1321
+  ],
+  "Recon": [
+   83671,
+   29389,
+   28198
+  ],
+  "Spoofing": [
+   22495,
+   6802,
+   7204
+  ],
+  "Web": [
+   3806,
+   906,
+   1167
+  ]
+ },
+ "multiclass_classes": [
+  "Benign",
+  "BruteForce",
+  "DDoS",
+  "DoS",
+  "Mirai",
+  "Recon",
+  "Spoofing",
+  "Web"
+ ],
+ "multiclass_excluded_flows": 0,
+ "split_sizes": [
+  4271710,
+  723726,
+  872231
+ ],
+ "attack_share": [
+  0.9888103359076342,
+  0.9792076006665505,
+  0.9830045022476844
+ ]
+}

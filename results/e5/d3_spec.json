@@ -1,0 +1,95 @@
+{
+ "dataset": "d3",
+ "mc_names": [
+  "Benign",
+  "BruteForce",
+  "DDoS",
+  "DoS",
+  "Mirai",
+  "Recon",
+  "Spoofing",
+  "Web"
+ ],
+ "slices": [
+  {
+   "family": "Benign",
+   "prefix": "out/ciciot/Benign_Final__BenignTraffic",
+   "pcap": "data/ciciot/pcap/Benign_Final/BenignTraffic.pcap",
+   "block": 99,
+   "start": 1665168840.350417,
+   "dur": 60,
+   "n_family": 160,
+   "n_benign": 160
+  },
+  {
+   "family": "BruteForce",
+   "prefix": "out/ciciot/DictionaryBruteForce__DictionaryBruteForce",
+   "pcap": "data/ciciot/pcap/DictionaryBruteForce/DictionaryBruteForce.pcap",
+   "block": 14,
+   "start": 1665765120.400262,
+   "dur": 60,
+   "n_family": 105,
+   "n_benign": 0
+  },
+  {
+   "family": "DDoS",
+   "prefix": "out/ciciot/DDoS-SYN_Flood__DDoS-SYN_Flood",
+   "pcap": "data/ciciot/pcap/DDoS-SYN_Flood/DDoS-SYN_Flood.pcap",
+   "block": 39,
+   "start": 1661540220.516492,
+   "dur": 60,
+   "n_family": 324197,
+   "n_benign": 0
+  },
+  {
+   "family": "DoS",
+   "prefix": "out/ciciot/DoS-SYN_Flood__DoS-SYN_Flood",
+   "pcap": "data/ciciot/pcap/DoS-SYN_Flood/DoS-SYN_Flood.pcap",
+   "block": 74,
+   "start": 1659452160.639212,
+   "dur": 60,
+   "n_family": 65788,
+   "n_benign": 0
+  },
+  {
+   "family": "Mirai",
+   "prefix": "out/ciciot/Mirai-greeth_flood__Mirai-greeth_flood",
+   "pcap": "data/ciciot/pcap/Mirai-greeth_flood/Mirai-greeth_flood.pcap",
+   "block": 4,
+   "start": 1673536980.107475,
+   "dur": 60,
+   "n_family": 201,
+   "n_benign": 0
+  },
+  {
+   "family": "Recon",
+   "prefix": "out/ciciot/VulnerabilityScan__VulnerabilityScan",
+   "pcap": "data/ciciot/pcap/VulnerabilityScan/VulnerabilityScan.pcap",
+   "block": 399,
+   "start": 1664829660.949854,
+   "dur": 60,
+   "n_family": 322,
+   "n_benign": 0
+  },
+  {
+   "family": "Spoofing",
+   "prefix": "out/ciciot/DNS_Spoofing__DNS_Spoofing",
+   "pcap": "data/ciciot/pcap/DNS_Spoofing/DNS_Spoofing.pcap",
+   "block": 1389,
+   "start": 1668612300.811867,
+   "dur": 60,
+   "n_family": 1637,
+   "n_benign": 0
+  },
+  {
+   "family": "Web",
+   "prefix": "out/ciciot/SqlInjection__SqlInjection",
+   "pcap": "data/ciciot/pcap/SqlInjection/SqlInjection.pcap",
+   "block": 49,
+   "start": 1664820360.504731,
+   "dur": 60,
+   "n_family": 151,
+   "n_benign": 0
+  }
+ ]
+}

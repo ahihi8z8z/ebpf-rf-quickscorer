@@ -1,0 +1,114 @@
+{
+ "coverage_at_N": {
+  "BENIGN": {
+   "flows": 1578653,
+   "reach_N": 506286,
+   "share": 0.3207
+  },
+  "Bot": {
+   "flows": 1228,
+   "reach_N": 738,
+   "share": 0.601
+  },
+  "DDoS": {
+   "flows": 62896,
+   "reach_N": 62880,
+   "share": 0.9997
+  },
+  "DoS GoldenEye": {
+   "flows": 7538,
+   "reach_N": 7452,
+   "share": 0.9886
+  },
+  "DoS Hulk": {
+   "flows": 14419,
+   "reach_N": 14258,
+   "share": 0.9888
+  },
+  "DoS Slowhttptest": {
+   "flows": 4493,
+   "reach_N": 1132,
+   "share": 0.2519
+  },
+  "DoS slowloris": {
+   "flows": 4491,
+   "reach_N": 2208,
+   "share": 0.4916
+  },
+  "FTP-Patator": {
+   "flows": 4002,
+   "reach_N": 3990,
+   "share": 0.997
+  },
+  "Heartbleed": {
+   "flows": 1,
+   "reach_N": 1,
+   "share": 1.0
+  },
+  "Infiltration": {
+   "flows": 8,
+   "reach_N": 7,
+   "share": 0.875
+  },
+  "PortScan": {
+   "flows": 158864,
+   "reach_N": 208,
+   "share": 0.0013
+  },
+  "SSH-Patator": {
+   "flows": 2979,
+   "reach_N": 2973,
+   "share": 0.998
+  },
+  "Web Attack - Brute Force": {
+   "flows": 1364,
+   "reach_N": 151,
+   "share": 0.1107
+  },
+  "Web Attack - Sql Injection": {
+   "flows": 12,
+   "reach_N": 12,
+   "share": 1.0
+  },
+  "Web Attack - XSS": {
+   "flows": 631,
+   "reach_N": 26,
+   "share": 0.0412
+  },
+  "unlabelled": {
+   "flows": 1459,
+   "reach_N": 139,
+   "share": 0.0953
+  }
+ },
+ "coverage_at_N_all": 0.3269,
+ "test_rows": 118862,
+ "test_dup_in_train_share": 0.0124,
+ "test_dup_in_train_share_attack": 0.0,
+ "ablation_rf_T64D8_s0": {
+  "binary/all17": {
+   "test_macro_f1": 0.9916,
+   "test_nodup_macro_f1": 0.9916,
+   "n_test": 118862,
+   "n_test_nodup": 117394
+  },
+  "binary/no_resp_port": {
+   "test_macro_f1": 0.9898,
+   "test_nodup_macro_f1": 0.9898,
+   "n_test": 118862,
+   "n_test_nodup": 117394
+  },
+  "multiclass/all17": {
+   "test_macro_f1": 0.9131,
+   "test_nodup_macro_f1": 0.9131,
+   "n_test": 118720,
+   "n_test_nodup": 117252
+  },
+  "multiclass/no_resp_port": {
+   "test_macro_f1": 0.72,
+   "test_nodup_macro_f1": 0.72,
+   "n_test": 118720,
+   "n_test_nodup": 117252
+  }
+ }
+}

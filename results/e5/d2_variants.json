@@ -1,0 +1,38 @@
+[
+ {
+  "model": "trackh/out/e1/models/d2_binary_DT_D12_s0.npz",
+  "variant": "grf_k1",
+  "family": "DT"
+ },
+ {
+  "model": "trackh/out/e1/models/d2_binary_NN_16x16_s0.npz",
+  "variant": "nn_s1",
+  "family": "NN"
+ },
+ {
+  "model": "trackh/out/e1/models/d2_binary_DT_D12_s0.npz",
+  "variant": "null_g1",
+  "family": "null"
+ },
+ {
+  "model": "trackh/out/e1/models/d2_binary_RF_T16D12_s0.npz",
+  "variant": "grfm_k4",
+  "family": "RF-G-RF",
+  "e2_ns": 375.1,
+  "stages": 4
+ },
+ {
+  "model": "trackh/out/e1/models/d2_binary_RF_T16D12_s0.npz",
+  "variant": "qsb_g4",
+  "family": "RF-QS",
+  "e2_ns": 9932.6,
+  "stages": 4
+ },
+ {
+  "model": "trackh/out/e1/models/d2_binary_RF_T16D12_s0.npz",
+  "variant": "rfwl_g1",
+  "family": "RF-walk",
+  "e2_ns": 1247.2,
+  "stages": 1
+ }
+]

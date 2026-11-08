@@ -1,0 +1,39 @@
+# old xdp-program branches, verifier on DUT kernel 6.8 (bpftool loadall). rf_=origin/random_forest as-is, fix_=votes in dp->label, qs_=origin/quickscore with synthetic header
+rf_T100L16.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
+rf_T100L64.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
+rf_T10L16.o ok=0 processed 26619 insns processed 93 insns   processed 26619 insns (limit 1000000) max_states_per_insn 21 total_states 1072 peak_states 228 mark_read 16
+rf_T10L64.o ok=0 processed 33161 insns processed 93 insns   processed 33161 insns (limit 1000000) max_states_per_insn 33 total_states 1442 peak_states 286 mark_read 16
+rf_T200L16.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
+rf_T200L64.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
+rf_T20L16.o ok=0 processed 601650 insns processed 93 insns   processed 601650 insns (limit 1000000) max_states_per_insn 58 total_states 25727 peak_states 609 mark_read 25
+rf_T20L64.o ok=0 processed 244420 insns processed 93 insns   processed 244420 insns (limit 1000000) max_states_per_insn 62 total_states 11738 peak_states 486 mark_read 22
+rf_T500L16.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
+rf_T500L64.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
+rf_T50L16.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
+fix_T100L16.o ok=0 processed 41290 insns (limit 1000000) max_states_per_insn 99 total_states 1347 peak_states 388 mark_read 201 
+fix_T10L16.o ok=0 processed 4869 insns (limit 1000000) max_states_per_insn 9 total_states 118 peak_states 105 mark_read 53 
+fix_T200L16.o ok=0 processed 79175 insns (limit 1000000) max_states_per_insn 139 total_states 2946 peak_states 594 mark_read 364 
+fix_T20L16.o ok=0 processed 8935 insns (limit 1000000) max_states_per_insn 19 total_states 193 peak_states 151 mark_read 70 
+fix_T500L16.o ok=255 processed 41353 insns (limit 1000000) max_states_per_insn 4 total_states 578 peak_states 578 mark_read 11 
+fix_T50L16.o ok=0 processed 20831 insns (limit 1000000) max_states_per_insn 48 total_states 581 peak_states 278 mark_read 119 
+fix_T100L64.o ok=0 processed 54718 insns (limit 1000000) max_states_per_insn 99 total_states 1827 peak_states 502 mark_read 271 
+fix_T10L64.o ok=0 processed 5848 insns (limit 1000000) max_states_per_insn 9 total_states 144 peak_states 125 mark_read 71 
+fix_T200L64.o ok=0 processed 110798 insns (limit 1000000) max_states_per_insn 187 total_states 3687 peak_states 808 mark_read 493 
+fix_T20L64.o ok=0 processed 12124 insns (limit 1000000) max_states_per_insn 19 total_states 262 peak_states 185 mark_read 93 
+fix_T500L64.o ok=255 processed 40330 insns (limit 1000000) max_states_per_insn 4 total_states 574 peak_states 574 mark_read 15 
+fix_T50L64.o ok=0 processed 29133 insns (limit 1000000) max_states_per_insn 49 total_states 805 peak_states 344 mark_read 160 
+qs_T100L16.o ok=0 processed 631394 insns (limit 1000000) max_states_per_insn 16 total_states 20073 peak_states 2563 mark_read 417 
+qs_T10L16.o ok=0 processed 8603 insns (limit 1000000) max_states_per_insn 14 total_states 251 peak_states 204 mark_read 68 
+qs_T200L16.o ok=255 processed 1000001 insns (limit 1000000) max_states_per_insn 16 total_states 28344 peak_states 3396 mark_read 821 libbpf: prog 'xdp_anomaly_detector': BPF program load failed: Argument list too long
+qs_T20L16.o ok=0 processed 27925 insns (limit 1000000) max_states_per_insn 16 total_states 836 peak_states 504 mark_read 107 
+qs_T500L16.o ok=255 processed 78179 insns (limit 1000000) max_states_per_insn 4 total_states 776 peak_states 776 mark_read 693 
+qs_T50L16.o ok=0 processed 156118 insns (limit 1000000) max_states_per_insn 16 total_states 4914 peak_states 1480 mark_read 225 
+qs_T100L64.o ok=255 processed 79830 insns (limit 1000000) max_states_per_insn 4 total_states 807 peak_states 807 mark_read 604 
+qs_T10L64.o ok=0 processed 17615 insns (limit 1000000) max_states_per_insn 14 total_states 326 peak_states 279 mark_read 144 
+qs_T200L64.o ok=255 processed 77831 insns (limit 1000000) max_states_per_insn 4 total_states 763 peak_states 763 mark_read 386 
+qs_T20L64.o ok=0 processed 45891 insns (limit 1000000) max_states_per_insn 16 total_states 983 peak_states 657 mark_read 264 
+qs_T500L64.o ok=255 processed 77825 insns (limit 1000000) max_states_per_insn 4 total_states 759 peak_states 759 mark_read 9 
+qs_T50L64.o ok=0 processed 222706 insns (limit 1000000) max_states_per_insn 16 total_states 5299 peak_states 1823 mark_read 621 
+done
+# ok=255 at low processed count = 'The sequence of 8193 jumps is too complex' (EFAULT): fix_T500*, qs_T100L64, qs_T200L64, qs_T500*
+rf_T50L64.o ok=255 processed 1000001 insns   BPF program is too large. Processed 1000001 insn
